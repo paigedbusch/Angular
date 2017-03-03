@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="assessment">
+<html lang='en' ng-app='assessment'>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>Front End Assessment</title>
-    <link rel="stylesheet" href="./styles/app.css">
+    <link rel='stylesheet' href='./styles/app.css'>
 </head>
 <body>
-<!--This div wraps the entire page-->
-    <div class="site-wrapper">
-        <!--Here is your header with the navigation nested inside -->
-        <header class="site-header" role="banner">
-            <div class="container">
-              <!--Insert Logo directive here -->
-                <nav class="site-nav">
-                    <ul class="primary-nav">
-                        <!-- Navs go here -->
+    <div class='site-wrapper'>
+        <header class='site-header' role='banner'>
+            <div class='container'>
+              <logo-directive class='logo'></logo-directive>
+                <nav class='site-nav'>
+                    <ul class='primary-nav'>
+                        <a ui-sref='home'>Home</a>
+                        <a ui-sref='about'>About</a>
+                        <a ui-sref='blog'>Blog</a>
+                        <a ui-sref='shop'>Shop</a>
                     </ul>
                 </nav>
-                <button class="hamburger toggle-nav js-toggle-nav" ng-click="showNav">
-                    <span class="hamburger-box"><span class="hamburger-inner"></span>
+                <button class='hamburger toggle-nav js-toggle-nav' ng-click='showNav'>
+                    <span class='hamburger-box'><span class='hamburger-inner'></span>
                     </span>
                 </button>
 
             </div>
         </header>
-        <!--This is the main wrapper -->
-        <main class="site-main" role="main">
+        <main class='site-main' role='main'>
 
-        <!--Views go here -->
+        <ui-view></ui-view>
 
         </main>
         </div>
 
-
-<!--ADD ALL YOUR SCRIPTS HERE -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js'></script>
+<script src='./app.js'></script>
+<script src='./homeCtrl.js'></script>
+<script src='./imgDirective.js'></script>
+<script src='./logoDirective.js'></script>
+<script src='./productDetailsCtrl.js'></script>
+<script src='./productDirective.js'></script>
+<script src='./shopCtrl.js'></script>
+<script src='./shopService.js'></script>
 
 </body>
 </html>
